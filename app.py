@@ -1,7 +1,3 @@
-
-
-
-# ----------------------- libraries ----------------------------------------------------------------
 import random  
 import dash;import requests
 import dash_leaflet as dl  
