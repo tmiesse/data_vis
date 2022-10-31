@@ -216,10 +216,16 @@ app.layout = html.Div(children=[
 def update_output(n_clicks, input1, input2,input3,input4,input5,input6,interval):
     start = pd.to_datetime(input1+input2+input3)
     end = pd.to_datetime(input4+input5+input6)
-    time['start'] = start
-    time['end'] = end
-    time['interval']=interval
-    return
+
+    if '6' in interval:
+        days = end - start
+        if days.days<30:
+            time['start'] = start
+            time['end'] = end
+            time['interval']=interval
+            return
+        else:
+            return 'Need to be within 30 days if using 6min interval'
 
 
 @app.callback(
