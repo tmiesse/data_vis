@@ -1,1 +1,1 @@
-worker: python apps.py runserver 0.0.0.0:5000
+worker: python apps.py --bind :$PORT --workers 1 --threads 10 --timeout 0
