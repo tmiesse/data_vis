@@ -1,1 +1,1 @@
-worker: python apps.py --bind :$PORT --workers 1 --threads 10 --timeout 0
+web: python apps.py --bind :$PORT --workers 1 --threads 10 --timeout 0
